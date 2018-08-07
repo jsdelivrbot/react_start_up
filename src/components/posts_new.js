@@ -54,10 +54,7 @@ class PostsNew extends Component {
 }
 
 function validate(values) {
-  // console.log(values) -> { title: 'asdf', categories: 'asdf', content: 'asdf' }
   const errors = {};
-
-  // Validate the inputs from 'values'
   if (!values.title) {
     errors.title = "Enter a title";
   }
@@ -67,9 +64,6 @@ function validate(values) {
   if (!values.content) {
     errors.content = "Enter some content please";
   }
-
-  // If errors is empty, the form is fine to submit
-  // If errors has *any* properties, redux form assumes form is invalid
   return errors;
 }
 
